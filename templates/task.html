@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ task['title'] }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="center-text">
+    <h1>{{ task['title'] }}</h1>
+    <p>{{ description | replace('\n', '<br>') | safe }}</p> <!-- Здесь выводится описание задания -->
+    </div>
+    <form method="POST">
+        <p>Введите ваш ответ:</p>
+        <input type="text" name="answer" required>
+        <button type="submit">Отправить</button>
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

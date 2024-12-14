@@ -1,0 +1,166 @@
+/* Общие стили для всей страницы */
+body {
+    background-color: #121212; /* темный фон */
+    color: #f1e3b4; /* светло-желтый цвет текста */
+    font-family: 'Courier New', Courier, monospace; /* моноширинный шрифт, как у Advent of Code */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding-left: 20px; /* увеличиваем отступ слева */
+    padding-right: 20px; /* увеличиваем отступ справа */
+}
+
+h1, h2, h3, h4 {
+    font-size: 2em;
+    text-align: center;
+    color: #f1e3b4;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4); /* легкое свечение */
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+/* Стили для контейнера задания */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    background-color: #1f1f1f; /* темный фон для контейнера */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* свечение вокруг контейнера */
+    padding-left: 30px; /* добавляем отступ внутри контейнера */
+    padding-right: 30px; /* добавляем отступ внутри контейнера */
+}
+
+/* Стили для текста описания задания */
+.task-desc {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #f1e3b4;
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* Чтобы текст с новой строки не ломался */
+}
+.center-text {
+    text-align: center;
+}
+/* Стили для кнопок */
+button {
+    background-color: #2f8f8f; /* темно-синий фон кнопки */
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4e8f8f; /* смена цвета при наведении */
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #444444;
+    background-color: #2c2c2c;
+    color: #f1e3b4;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2f8f8f;
+}
+
+/* Для блока с сообщением об ошибке или успехе */
+.feedback {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.feedback.success {
+    background-color: #2f8f8f;
+    color: #fff;
+    border: 1px solid #3fafa3;
+}
+
+.feedback.error {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: 1px solid #ff3333;
+}
+
+/* Стили для фоновых эффектов */
+body {
+    background: linear-gradient(180deg, #121212 0%, #2a2a2a 100%);
+}
+
+/* Анимации для новогоднего эффекта */
+@keyframes snow {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.snowflakes div {
+    position: absolute;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: snow 10s linear infinite;
+}
+
+.snowflakes div:nth-child(1) {
+    left: 10%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+.snowflakes div:nth-child(2) {
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 15s;
+    animation-delay: 3s;
+}
+
+.snowflakes div:nth-child(3) {
+    left: 40%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+
+/* Добавьте больше снежинок с разными анимациями */
