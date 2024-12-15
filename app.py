@@ -45,5 +45,11 @@ def task(task_id):
 def success(task_id):
     return render_template("success.html", task=TASKS[task_id])
 
+
+# Страница прощание
+@app.route("/happyend")
+def happyend():
+    return render_template("happyend.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

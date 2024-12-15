@@ -1,7 +1,8 @@
 /* Общие стили для всей страницы */
 body {
     background-color: #121212; /* темный фон */
-    color: #f1e3b4; /* светло-желтый цвет текста */
+    /*color: #f1e3b4; /* светло-желтый цвет текста */
+    color: #f1e3b4;
     font-family: 'Courier New', Courier, monospace; /* моноширинный шрифт, как у Advent of Code */
     margin: 0;
     padding: 0;
@@ -47,19 +48,19 @@ h1 {
 }
 /* Стили для кнопок */
 button {
-    background-color: #2f8f8f; /* темно-синий фон кнопки */
-    color: white;
+    background-color: #f1e3b4; /* темно-синий фон кнопки */
+    color: black;
     font-size: 1.2em;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #4e8f8f; /* смена цвета при наведении */
+    background-color: #f9f1d9; /* смена цвета при наведении */
 }
 
 /* Стили для формы */
