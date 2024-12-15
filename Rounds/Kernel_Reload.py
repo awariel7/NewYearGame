@@ -15,7 +15,7 @@ task_desc = """
 
 error_message = 'Не подходит...Есть другие варианты?'
 success_message = 'Подходит!'
-
+button_text = 'Пробуем запустить'
 
 def check_answer(answer):
     correct_input = 'ДедМороз@КрасныйНос'

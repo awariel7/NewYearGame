@@ -23,6 +23,7 @@ task_desc = """
 """
 error_message = 'Не подходит...Есть другие варианты?'
 success_message = 'Точно! Так и было!'
+button_text = 'Пробуем запустить'
 
 
 def check_answer(answer):

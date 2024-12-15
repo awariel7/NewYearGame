@@ -24,6 +24,7 @@ Cистема загрузилась! Так...<br>
 
 error_message = 'Не подходит...Есть другие варианты?'
 success_message = 'Подходит!'
+button_text = 'Пробуем запустить'
 
 def check_answer(answer):
     correct_input = '111 97 48'

@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="center-text">
-        <h1>Добро пожаловать в новогодний квест!</h1>
+        <h1>Новый год под угрозой!</h1>
         <p>Дорогие коллеги-айтишники,<br>
     На днях мы наконец завершили импортозамещение и перевели нашу Santa Gift Management System (SGMS) на отечественную базу данных — ОленьДБ.<br>
     Всё шло как по маслу, пока я не решил внести последние корректировки в список подарков. Уверенно ввёл SQL-запрос,<br>
@@ -16,12 +16,31 @@
     Я подключился к вашему офису, чтобы вы помогли мне с этой задачей. Ваша миссия — восстановить сервер,<br>
     исправить базу подарков и настроить доставку подарков детям по всему миру<br>
     Вы поможете мне?<br></p>
-    <button type="submit">Узнать, что случилось у Деда</button>
-    <ul>
-        {% for task_id, task in tasks.items() %}
-            <li><a href="{{ url_for('task', task_id=task_id) }}">{{ task['title'] }}</a></li>
-        {% endfor %}
-    </ul>
+    <a href="{{ url_for('task', task_id=1) }}">
+        <button>Узнать, что случилось у Деда</button>
+    </a>
     </div>
+    <div class="snowflakes"></div>
+    <script>
+        // Количество снежинок
+        const numberOfSnowflakes = 15;
+        const snowflakesContainer = document.querySelector('.snowflakes');
+
+        for (let i = 0; i < numberOfSnowflakes; i++) {
+            const snowflake = document.createElement('div');
+            // Случайное положение снежинки по горизонтали
+            snowflake.style.left = `${Math.random() * 100}%`;
+            // Случайный размер снежинки
+            const size = Math.random() * 10 + 5; // от 5px до 15px
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            // Случайная продолжительность анимации
+            snowflake.style.animationDuration = `${Math.random() * 10 + 5}s`;
+            // Случайная задержка анимации
+            snowflake.style.animationDelay = `${Math.random() * 5}s`;
+            // Добавление снежинки в контейнер
+            snowflakesContainer.appendChild(snowflake);
+        }
+    </script>
 </body>
 </html>

@@ -2,13 +2,13 @@
 <html>
 <head>
     <title>Новый год спасён!</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/tree-style.css">
 </head>
 <body>
     <div class="center-text">
         <h1>Новый год спасён!</h1>
-        <p>Дорогие коллеги-айтишники,<br>
-    Друзья, спасибо вам большое за помощь!<br>
+        <p>Друзья, спасибо вам большое за помощь!<br>
+            <br>
     Я даже представить не мог, что вы так быстро справитесь со всеми задачами, поднимете ОленьДБ на ноги<br>
     и восстановите работу моей системы управления подарками!<br>
     Без вас Новый год мог бы оказаться под угрозой, но благодаря вашему таланту, смекалке и настойчивости,<br>
@@ -24,5 +24,57 @@
     Ваш Дед Мороз<br>
     <br></p>
     </div>
+    <div class="tree">
+        <div class="star">★</div>
+        <div class="branch">
+            <span class="ball green">•</span>
+        </div>
+        <div class="branch">
+            <span class="ball red">•</span>
+            <span class="ball yellow">•</span>
+        </div>
+        <div class="branch">
+            <span class="ball red">•</span>
+            <span class="ball yellow">•</span>
+            <span class="ball blue">•</span>
+        </div>
+        <div class="branch">
+            <span class="ball orange">•</span>
+            <span class="ball purple">•</span>
+            <span class="ball red">•</span>
+            <span class="ball green">•</span>
+        </div>
+        <div class="branch">
+            <span class="ball red">•</span>
+            <span class="ball green">•</span>
+            <span class="ball yellow">•</span>
+            <span class="ball blue">•</span>
+            <span class="ball purple">•</span>
+        </div>
+        <div class="trunk">||</div>
+    </div>
+
+    <div class="snowflakes"></div>
+        <script>
+            // Количество снежинок
+            const numberOfSnowflakes = 15;
+            const snowflakesContainer = document.querySelector('.snowflakes');
+
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                // Случайное положение снежинки по горизонтали
+                snowflake.style.left = `${Math.random() * 100}%`;
+                // Случайный размер снежинки
+                const size = Math.random() * 10 + 5; // от 5px до 15px
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                // Случайная продолжительность анимации
+                snowflake.style.animationDuration = `${Math.random() * 10 + 5}s`;
+                // Случайная задержка анимации
+                snowflake.style.animationDelay = `${Math.random() * 5}s`;
+                // Добавление снежинки в контейнер
+                snowflakesContainer.appendChild(snowflake);
+            }
+        </script>
 </body>
 </html>

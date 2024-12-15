@@ -22,8 +22,9 @@ task_desc = """
 
 error_message = 'Не подходит...Есть другие варианты?'
 success_message = 'Так всё и выглядело! Отличная работа!'
+button_text = 'Пробуем запустить'
 
 
 def check_answer(answer):
-    correct_input = res
+    correct_input = ' '.join(res)
     return answer.strip().lower() == correct_input

@@ -25,6 +25,8 @@ P4 = 5 + 9 = 14<br>
  """
 error_message = 'Не подходит...Есть другие варианты?'
 success_message = 'Так действительно быстрее! Замечательно!'
+
+button_text = 'Пробуем запустить'
 def check_answer(answer):
     min_t = '13'
     return answer.strip().lower() == min_t

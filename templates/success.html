@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Поздравляем!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Успех!</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Вы успешно завершили задание "{{ task['title'] }}"!</h1>
-    <a href="/">Вернуться к списку заданий</a>
+    <div class="container centered">
+        <h1>{{ success_msg }}</h1>
+        <p></p>
+
+        {% if task["task_id"] < tasks|length %}
+            <a href="{{ url_for('task', task_id=(task["task_id"] | int + 1)) }}">
+                <button>{{ button_txt }}</button>
+            </a>
+        {% else %}
+            <a href="{{ url_for('happyend') }}">
+                <button>{{ button_txt }}</button>
+            </a>
+        {% endif %}
+    </div>
 </body>
 </html>

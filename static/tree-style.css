@@ -1,0 +1,143 @@
+/* Стиль для ёлочки */
+body {
+    background-color: #0f0f23; /* темный фон */
+    color: #f1e3b4; /* светло-желтый цвет текста */
+    font-family: 'Courier New', Courier, monospace; /* моноширинный шрифт, как у Advent of Code */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding-left: 20px; /* увеличиваем отступ слева */
+    padding-right: 20px; /* увеличиваем отступ справа */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tree {
+    text-align: center;
+}
+
+.star {
+    font-size: 50px;
+    color: yellow;
+    margin-bottom: -10px;
+}
+
+.branch {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.ball {
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.purple {
+    color: #c600fc;
+}
+
+.orange {
+    color: #fc9900;
+}
+
+.trunk {
+    font-size: 50px;
+    color: #8B4513; /* Цвет ствола */
+}
+
+/* Анимации для новогоднего эффекта */
+@keyframes snow {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflakes {
+    position: fixed; /* чтобы оставаться на экране при прокрутке */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* чтобы не мешать взаимодействию с другими элементами */
+    z-index: 9999; /* чтобы снежинки отображались поверх контента */
+}
+
+.snowflakes div {
+    position: absolute;
+    background: white;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: snow 10s linear infinite;
+}
+
+.snowflakes div:nth-child(1) {
+    left: 10%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+.snowflakes div:nth-child(2) {
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 15s;
+    animation-delay: 3s;
+}
+
+.snowflakes div:nth-child(3) {
+    left: 40%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+
+.snowflakes div:nth-child(3) {
+    left: 60%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+
+.snowflakes div:nth-child(3) {
+    left: 80%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+
+
+.snowflakes div:nth-child(3) {
+    left: 100%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+/* Добавьте больше снежинок с разными анимациями */

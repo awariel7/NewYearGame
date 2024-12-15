@@ -1,8 +1,7 @@
 /* Общие стили для всей страницы */
 body {
-    background-color: #121212; /* темный фон */
-    /*color: #f1e3b4; /* светло-желтый цвет текста */
-    color: #f1e3b4;
+    background-color: #0f0f23; /* темный фон */
+    color: #f1e3b4; /* светло-желтый цвет текста */
     font-family: 'Courier New', Courier, monospace; /* моноширинный шрифт, как у Advent of Code */
     margin: 0;
     padding: 0;
@@ -14,7 +13,7 @@ body {
 h1, h2, h3, h4 {
     font-size: 2em;
     text-align: center;
-    color: #f1e3b4;
+    color: #00cc00;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4); /* легкое свечение */
 }
 
@@ -30,16 +29,25 @@ h1 {
     border: 1px solid #444444;
     border-radius: 10px;
     background-color: #1f1f1f; /* темный фон для контейнера */
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* свечение вокруг контейнера */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* свечение вокруг контейнера */
     padding-left: 30px; /* добавляем отступ внутри контейнера */
     padding-right: 30px; /* добавляем отступ внутри контейнера */
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота контейнера — вся высота окна */
+    text-align: center; /* Для центрирования текста */
 }
 
 /* Стили для текста описания задания */
 .task-desc {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #f1e3b4;
+    color: #00cc00;
     margin-bottom: 20px;
     white-space: pre-wrap; /* Чтобы текст с новой строки не ломался */
 }
@@ -57,6 +65,7 @@ button {
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
     transition: background-color 0.3s ease;
+    margin-top: 20px; /* Немного отступа сверху для кнопки */
 }
 
 button:hover {
@@ -84,7 +93,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
     outline: none;
-    border-color: #2f8f8f;
+    border-color: #00cc00;
 }
 
 /* Для блока с сообщением об ошибке или успехе */
@@ -124,12 +133,13 @@ body {
 }
 
 .snowflakes {
-    position: absolute;
+    position: fixed; /* чтобы оставаться на экране при прокрутке */
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* чтобы не мешать взаимодействию с другими элементами */
+    z-index: 9999; /* чтобы снежинки отображались поверх контента */
 }
 
 .snowflakes div {
@@ -164,4 +174,28 @@ body {
     animation-delay: 5s;
 }
 
+.snowflakes div:nth-child(3) {
+    left: 60%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+
+.snowflakes div:nth-child(3) {
+    left: 80%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
+
+
+.snowflakes div:nth-child(3) {
+    left: 100%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 14s;
+    animation-delay: 5s;
+}
 /* Добавьте больше снежинок с разными анимациями */
