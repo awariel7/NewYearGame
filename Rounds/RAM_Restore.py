@@ -11,6 +11,16 @@ for s in Moroz_pass:
         RAM_data.append(str(ord(s)))
 address = ' '.join(RAM_list)
 RAM_data_s = ' '.join(RAM_data)
+
+
+task_table = '<table><tr>'
+for i in range(len(RAM_list)):
+    task_table += ('<th>' + RAM_list[i] + '</th>')
+task_table += '</tr><tr>'
+for i in range(len(RAM_data)):
+    task_table += ('<td>' + RAM_data[i] + '</td>')
+task_table += '</tr></table>'
+
 task_desc = """
 Cистема загрузилась! Так...<br>
 Так...<br>
@@ -20,7 +30,7 @@ Cистема загрузилась! Так...<br>
 Если один символ упоминается несколько раз, то вы должны прислать мне его <b>только один раз</b>.<br>
 А я пока проверю целостность своего жёсткого диска..<br>
 <br>
-Адреса памяти:\n""" + address + "\nДанные:\n" + RAM_data_s
+Адреса памяти с оставшимися данными:"""
 
 error_message = 'Не подходит...Есть другие варианты?'
 success_message = 'Подходит!'

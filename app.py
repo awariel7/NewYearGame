@@ -32,15 +32,16 @@ def task(task_id):
     task_desc = getattr(module, "task_desc", "Описание отсутствует.")
     success_msg = getattr(module, "success_message", "Молодцы! Готовы перейти к следующему заданию?")
     error_msg = getattr(module, "error_message", "Неверный ответ, попробуйте ещё раз!")
+    task_table = getattr(module, "task_table", None)
 
     if request.method == "POST":
         user_answer = request.form["answer"]
         if module.check_answer(user_answer):
             return redirect(url_for("success", task_id=task_id))
         else:
-            return render_template("task.html", task=task_info, description=task_desc, error=error_msg)
+            return render_template("task.html", task=task_info, description=task_desc, error=error_msg, task_table=task_table)
 
-    return render_template("task.html", task=task_info, description=task_desc)
+    return render_template("task.html", task=task_info, description=task_desc, task_table=task_table)
 
 # Страница успеха
 @app.route("/success/<int:task_id>")

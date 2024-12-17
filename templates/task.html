@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+    th, td {
+        border: 1px solid #f1e3b4;
+        padding: 8px;
+        text-align: left;
+    }
+</style>
 <head>
     <title>{{ task['title'] }}</title>
     <link rel="stylesheet" href="/static/style.css">
@@ -8,6 +19,9 @@
     <div class="center-text">
     <h1>{{ task['title'] }}</h1>
     <p>{{ description | replace('\n', '<br>') | safe }}</p> <!-- Здесь выводится описание задания -->
+    {% if task_table %}
+        {{ task_table | safe }}
+    {% endif %}
     </div>
     <form method="POST" action="#error-message">
         <p>Введите ваш ответ:</p>
