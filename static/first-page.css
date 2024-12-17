@@ -1,4 +1,3 @@
-/* Общие стили для всей страницы */
 body {
     background-color: #0f0f23; /* темный фон */
     color: #f1e3b4; /* светло-желтый цвет текста */
@@ -8,6 +7,10 @@ body {
     overflow-x: hidden;
     padding-left: 200px; /* увеличиваем отступ слева */
     padding-right: 200px; /* увеличиваем отступ справа */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 h1, h2, h3, h4 {
@@ -21,19 +24,6 @@ h1 {
     margin-top: 20px;
 }
 
-/* Стили для контейнера задания */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #0f0f23;
-    border-radius: 10px;
-    background-color: #0f0f23; /* темный фон для контейнера */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* свечение вокруг контейнера */
-    padding-left: 30px; /* добавляем отступ внутри контейнера */
-    padding-right: 30px; /* добавляем отступ внутри контейнера */
-}
-
 .centered {
     display: flex;
     flex-direction: column;
@@ -41,23 +31,11 @@ h1 {
     align-items: center;
     height: 100vh; /* Высота контейнера — вся высота окна */
     text-align: center; /* Для центрирования текста */
-    background-color: #0f0f23; /* темный фон для контейнера */
 }
 
-/* Стили для текста описания задания */
-.task-desc {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #00cc00;
-    margin-bottom: 20px;
-    white-space: pre-wrap; /* Чтобы текст с новой строки не ломался */
-}
-.center-text {
-    text-align: center;
-}
 /* Стили для кнопок */
 button {
-    background-color: #f1e3b4; /* светло-желтый цвет кнопки */
+    background-color: #f1e3b4; /* темно-синий фон кнопки */
     color: black;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -71,51 +49,6 @@ button {
 
 button:hover {
     background-color: #f9f1d9; /* смена цвета при наведении */
-}
-
-/* Стили для формы */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-input[type="text"] {
-    padding: 10px;
-    font-size: 1.2em;
-    width: 100%;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #444444;
-    background-color: #2c2c2c;
-    color: #f1e3b4;
-}
-
-input[type="text"]:focus {
-    outline: none;
-    border-color: #00cc00;
-}
-
-/* Для блока с сообщением об ошибке или успехе */
-.feedback {
-    margin: 10px 0;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-.feedback.success {
-    background-color: #2f8f8f;
-    color: #fff;
-    border: 1px solid #3fafa3;
-}
-
-.feedback.error {
-    background-color: #ff4d4d;
-    color: #fff;
-    border: 1px solid #ff3333;
 }
 
 /* Анимации для новогоднего эффекта */

@@ -8,7 +8,7 @@ TASKS = {
     1: {"title": "Перезагрузка ядра", "module": "Rounds.Kernel_Reload", "task_id": 1},
     2: {"title": "Восстановление RAM", "module": "Rounds.RAM_Restore", "task_id": 2},
     3: {"title": "Дефрагментация диска", "module": "Rounds.Disk_defragmentation", "task_id": 3},
-    4: {"title": "Регенерация данных", "module": "Rounds.Data_regeneration", "task_id": 4},
+    4: {"title": "Восстановление страницы данных", "module": "Rounds.Data_regeneration", "task_id": 4},
     5: {"title": "Восстановление индекса", "module": "Rounds.Index_restore", "task_id": 5},
     6: {"title": "Распределение потоков", "module": "Rounds.Thread_split", "task_id": 6},
     7: {"title": "Кэширование запросов", "module": "Rounds.Query_cache", "task_id": 7},
