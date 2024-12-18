@@ -9,7 +9,11 @@
 <body>
     <div class="container centered">
         <h1>{{ success_msg }}</h1>
-        <p></p>
+        <p>UPDATE player_status<br>
+        SET level = level + 1<br>
+        WHERE challenge_completed = TRUE<br>
+        EXECUTE FUNCTION victory_dance();<br>
+        🎁🎄🎁<br></p>
 
         {% if task["task_id"] < tasks|length %}
             <a href="{{ url_for('task', task_id=(task["task_id"] | int + 1)) }}">
