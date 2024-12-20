@@ -8,6 +8,7 @@ body {
     overflow-x: hidden;
     padding-left: 200px; /* увеличиваем отступ слева */
     padding-right: 200px; /* увеличиваем отступ справа */
+    font-size: 1.2em;
 }
 
 h1, h2, h3, h4 {
@@ -39,6 +40,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1.6em;
     height: 100vh; /* Высота контейнера — вся высота окна */
     text-align: center; /* Для центрирования текста */
     background-color: #0f0f23; /* темный фон для контейнера */
@@ -46,7 +48,7 @@ h1 {
 
 /* Стили для текста описания задания */
 .task-desc {
-    font-size: 1.2em;
+    font-size: 1.8em;
     line-height: 1.6;
     color: #00cc00;
     margin-bottom: 20px;
@@ -116,81 +118,4 @@ input[type="text"]:focus {
     background-color: #ff4d4d;
     color: #fff;
     border: 1px solid #ff3333;
-}
-
-/* Анимации для новогоднего эффекта */
-@keyframes snow {
-    0% {
-        transform: translateY(-100px);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
-.snowflakes {
-    position: fixed; /* чтобы оставаться на экране при прокрутке */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* чтобы не мешать взаимодействию с другими элементами */
-    z-index: 9999; /* чтобы снежинки отображались поверх контента */
-}
-
-.snowflakes div {
-    position: absolute;
-    background: white;
-    opacity: 0.8;
-    border-radius: 50%;
-    animation: snow 10s linear infinite;
-}
-
-.snowflakes div:nth-child(1) {
-    left: 10%;
-    width: 8px;
-    height: 8px;
-    animation-duration: 12s;
-    animation-delay: 0s;
-}
-
-.snowflakes div:nth-child(2) {
-    left: 25%;
-    width: 10px;
-    height: 10px;
-    animation-duration: 15s;
-    animation-delay: 3s;
-}
-
-.snowflakes div:nth-child(3) {
-    left: 40%;
-    width: 12px;
-    height: 12px;
-    animation-duration: 14s;
-    animation-delay: 5s;
-}
-
-.snowflakes div:nth-child(3) {
-    left: 60%;
-    width: 12px;
-    height: 12px;
-    animation-duration: 14s;
-    animation-delay: 5s;
-}
-
-.snowflakes div:nth-child(3) {
-    left: 80%;
-    width: 12px;
-    height: 12px;
-    animation-duration: 14s;
-    animation-delay: 5s;
-}
-
-
-.snowflakes div:nth-child(3) {
-    left: 100%;
-    width: 12px;
-    height: 12px;
-    animation-duration: 14s;
-    animation-delay: 5s;
 }

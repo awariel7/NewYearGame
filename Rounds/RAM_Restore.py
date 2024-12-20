@@ -1,11 +1,11 @@
-Moroz_pass = 'novogodnie_podarki_2025'
+Moroz_pass = 'noviy_god_2025'
 
 RAM_list = ['0x' + str(i) for i in range(1, len(Moroz_pass) + 1)]
 RAM_data = []
 
 for s in Moroz_pass:
     info = ''
-    if s in "oa0":
+    if s in "oa0g":
         RAM_data.append('ERROR')
     else:
         RAM_data.append(str(ord(s)))
@@ -13,7 +13,7 @@ address = ' '.join(RAM_list)
 RAM_data_s = ' '.join(RAM_data)
 
 
-task_table = '<table><tr>'
+task_table = '<table style="margin: 1px auto;"><tr>'
 for i in range(len(RAM_list)):
     task_table += ('<th>' + RAM_list[i] + '</th>')
 task_table += '</tr><tr>'
@@ -37,5 +37,5 @@ success_message = 'Подходит!'
 button_text = 'Восстановим бэкап базы'
 
 def check_answer(answer):
-    correct_input = '111 97 48'
+    correct_input = '111 103 48'
     return answer.strip().lower() == correct_input

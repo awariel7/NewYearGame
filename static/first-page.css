@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-size: 1.2em;
 }
 
 h1, h2, h3, h4 {
