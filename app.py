@@ -4,15 +4,16 @@ import importlib
 app = Flask(__name__)
 
 # Список заданий
+# Все новые задания добавлять сюда, соблюдая нумерацию, так как след. задание должно иметь id на 1 больше
 TASKS = {
     1: {"title": "Перезагрузка ядра", "module": "rounds.Kernel_Reload", "task_id": 1},
     2: {"title": "Восстановление RAM", "module": "rounds.RAM_Restore", "task_id": 2},
     # Третье задание удалено, не прошло проверку на испытуемых))
     # 3: {"title": "Дефрагментация диска", "module": "rounds.Disk_defragmentation", "task_id": 3},
-    4: {"title": "Восстановление страницы данных", "module": "rounds.Data_regeneration", "task_id": 4},
-    5: {"title": "Восстановление индекса", "module": "rounds.Index_restore", "task_id": 5},
-    6: {"title": "Распределение потоков", "module": "rounds.Thread_split", "task_id": 6},
-    7: {"title": "Кэширование запросов", "module": "rounds.Query_cache", "task_id": 7},
+    3: {"title": "Восстановление страницы данных", "module": "rounds.Data_regeneration", "task_id": 3},
+    4: {"title": "Восстановление индекса", "module": "rounds.Index_restore", "task_id": 4},
+    5: {"title": "Распределение потоков", "module": "rounds.Thread_split", "task_id": 5},
+    6: {"title": "Кэширование запросов", "module": "rounds.Query_cache", "task_id": 6},
 }
 
 # Главная страница
