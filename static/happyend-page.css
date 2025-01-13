@@ -1,3 +1,4 @@
+/* Стиль для ёлочки */
 body {
     background-color: #0f0f23; /* темный фон */
     color: #f1e3b4; /* светло-желтый цвет текста */
@@ -5,51 +6,63 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    padding-left: 200px; /* увеличиваем отступ слева */
-    padding-right: 200px; /* увеличиваем отступ справа */
+    padding-left: 20px; /* увеличиваем отступ слева */
+    padding-right: 20px; /* увеличиваем отступ справа */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-size: 1.2em;
+    font-size: 1.7em;
 }
 
-h1, h2, h3, h4 {
-    font-size: 2em;
+.tree {
     text-align: center;
-    color: #00cc00;
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4); /* легкое свечение */
 }
 
-h1 {
-    margin-top: 20px;
+.star {
+    font-size: 50px;
+    color: yellow;
+    margin-bottom: -10px;
 }
 
-.centered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Высота контейнера — вся высота окна */
-    text-align: center; /* Для центрирования текста */
+.branch {
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
-/* Стили для кнопок */
-button {
-    background-color: #f1e3b4; /* темно-синий фон кнопки */
-    color: black;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-    transition: background-color 0.3s ease;
-    margin-top: 20px; /* Немного отступа сверху для кнопки */
+.ball {
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-button:hover {
-    background-color: #f9f1d9; /* смена цвета при наведении */
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.purple {
+    color: #c600fc;
+}
+
+.orange {
+    color: #fc9900;
+}
+
+.trunk {
+    font-size: 50px;
+    color: #8B4513; /* Цвет ствола */
 }
 
 /* Анимации для новогоднего эффекта */
@@ -104,7 +117,7 @@ button:hover {
     animation-delay: 5s;
 }
 
-.snowflakes div:nth-child(3) {
+.snowflakes div:nth-child(4) {
     left: 60%;
     width: 12px;
     height: 12px;
@@ -112,7 +125,7 @@ button:hover {
     animation-delay: 5s;
 }
 
-.snowflakes div:nth-child(3) {
+.snowflakes div:nth-child(5) {
     left: 80%;
     width: 12px;
     height: 12px;
@@ -121,7 +134,7 @@ button:hover {
 }
 
 
-.snowflakes div:nth-child(3) {
+.snowflakes div:nth-child(6) {
     left: 100%;
     width: 12px;
     height: 12px;

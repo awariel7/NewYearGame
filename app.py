@@ -5,19 +5,20 @@ app = Flask(__name__)
 
 # Список заданий
 TASKS = {
-    1: {"title": "Перезагрузка ядра", "module": "Rounds.Kernel_Reload", "task_id": 1},
-    2: {"title": "Восстановление RAM", "module": "Rounds.RAM_Restore", "task_id": 2},
-    3: {"title": "Дефрагментация диска", "module": "Rounds.Disk_defragmentation", "task_id": 3},
-    4: {"title": "Восстановление страницы данных", "module": "Rounds.Data_regeneration", "task_id": 4},
-    5: {"title": "Восстановление индекса", "module": "Rounds.Index_restore", "task_id": 5},
-    6: {"title": "Распределение потоков", "module": "Rounds.Thread_split", "task_id": 6},
-    7: {"title": "Кэширование запросов", "module": "Rounds.Query_cache", "task_id": 7},
+    1: {"title": "Перезагрузка ядра", "module": "rounds.Kernel_Reload", "task_id": 1},
+    2: {"title": "Восстановление RAM", "module": "rounds.RAM_Restore", "task_id": 2},
+    # Третье задание удалено, не прошло проверку на испытуемых))
+    # 3: {"title": "Дефрагментация диска", "module": "rounds.Disk_defragmentation", "task_id": 3},
+    4: {"title": "Восстановление страницы данных", "module": "rounds.Data_regeneration", "task_id": 4},
+    5: {"title": "Восстановление индекса", "module": "rounds.Index_restore", "task_id": 5},
+    6: {"title": "Распределение потоков", "module": "rounds.Thread_split", "task_id": 6},
+    7: {"title": "Кэширование запросов", "module": "rounds.Query_cache", "task_id": 7},
 }
 
 # Главная страница
 @app.route("/")
 def index():
-    return render_template("index.html", tasks=TASKS)
+    return render_template("start.html", tasks=TASKS)
 
 # Страница конкретного задания
 @app.route("/task/<int:task_id>", methods=["GET", "POST"])
@@ -28,12 +29,12 @@ def task(task_id):
     task_info = TASKS[task_id]
     module = importlib.import_module(task_info["module"])
 
-    # Получаем описание из модуля
+    # Получаем описание и другие параметры из модуля
     task_desc = getattr(module, "task_desc", "Описание отсутствует.")
     success_msg = getattr(module, "success_message", "Молодцы! Готовы перейти к следующему заданию?")
     error_msg = getattr(module, "error_message", "Неверный ответ, попробуйте ещё раз!")
     task_table = getattr(module, "task_table", None)
-
+    # Проверяем ответ
     if request.method == "POST":
         user_answer = request.form["answer"]
         if module.check_answer(user_answer):
