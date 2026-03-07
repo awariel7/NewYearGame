@@ -12,6 +12,9 @@ env/
 # PyCharm
 .idea/
 
+# Claude Code
+.claude/
+
 # Word docs (task drafts)
 *.doc
 *.docx
