@@ -37,7 +37,6 @@ Cистема загрузилась! Так...<br>
 error_message = 'Не подходит...Есть другие варианты?'
 success_message = 'Подходит!'
 button_text = 'Восстановим бэкап базы'
-print(' '.join(list(Skipped_data)))
 def check_answer(answer):
     correct_input = '111 103 48' #' '.join(list(Skipped_data))
     return answer.strip().lower() == correct_input
